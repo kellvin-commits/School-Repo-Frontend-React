@@ -3,7 +3,7 @@ import { Plus, Trash2, Download, Users, FileText, TrendingUp, Edit, X, Search, M
 import {toast} from 'react-toastify'
 
 // API Configuration
-const API_BASE_URL = `https://marks-ioul.onrender.com/${api}/${students}`;
+const API_BASE_URL = `https://school-repo-backend.onrender.com/api/students`;
 
 // API Service Functions
 const api = {
@@ -13,7 +13,7 @@ const api = {
       if (!response.ok) throw new Error('Failed to fetch students');
       return await response.json();
     } catch (error) {
-      console.error('Error fetching students:', error);
+      console.log('Error fetching students:', error);
       return [];
     }
   },
@@ -29,14 +29,14 @@ const api = {
       console.log('API: Response status:', response.status);
       if (!response.ok) {
         const errorText = await response.text();
-        console.error('API: Error response:', errorText);
+        console.log('API: Error response:', errorText);
         throw new Error(`Failed to add student: ${errorText}`);
       }
       const result = await response.json();
       console.log('API: Success result:', result);
       return result;
     } catch (error) {
-      console.error('API: Error adding student:', error);
+      console.log('API: Error adding student:', error);
       throw error;
     }
   },
@@ -51,7 +51,7 @@ const api = {
       if (!response.ok) throw new Error('Failed to update student');
       return await response.json();
     } catch (error) {
-      console.error('Error updating student:', error);
+      console.log('Error updating student:', error);
       throw error;
     }
   },
@@ -64,7 +64,7 @@ const api = {
       if (!response.ok) throw new Error('Failed to delete student');
       return await response.json();
     } catch (error) {
-      console.error('Error deleting student:', error);
+      console.log('Error deleting student:', error);
       throw error;
     }
   },
