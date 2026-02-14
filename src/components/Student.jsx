@@ -264,7 +264,7 @@ export default function SchoolReportSaaS() {
             <div className="flex-1 min-w-0">
               <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-800 flex items-center gap-2">
                 <FileText className="text-indigo-600 shrink-0" size={20} />
-                <span className="truncate">School Report Card Generator</span>
+                <span className="truncate">Kelvin Report Card Generator</span>
               </h1>
               <p className="text-gray-600 mt-1 text-xs sm:text-sm">Manage marks and generate reports</p>
             </div>
